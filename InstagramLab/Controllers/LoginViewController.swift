@@ -18,10 +18,16 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private var animationView: Lottie.AnimationView!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    private var accountState: AccountState = .existingUser
+    private var authSession = AuthenticationSession()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        startAnimation()
     }
     
     private func startAnimation() {
@@ -33,4 +39,44 @@ class LoginViewController: UIViewController {
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         
     }
+    
+    private func continueLoginFlow(email: String, password: String) {
+        if accountState == .existingUser {
+            authSession.signExistingUser(email: email, password: password) { [weak self] (result) in
+                switch result {
+                case .failure(let error):
+                    self?.errorLabel.text = "\(error)"
+                    self?.errorLabel.textColor = .systemRed
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        self?.navigateToMainView()
+                    }
+                }
+            }
+        } else {
+            authSession.createNewUser(email: email, password: password) { [weak self] (result) in
+                switch result {
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self?.errorLabel.text = "\(error)"
+                        self?.errorLabel.textColor = .systemRed
+                    }
+                case .success(let newUser):
+                    DispatchQueue.main.async {
+                        self?.navigateToMainView()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func navigateToMainView() {
+        UIViewController.showViewController(storyboardName: "Main", viewControllerId: "MainTabBarController")
+    }
+    
+    private func clearErrorLabel() {
+        errorLabel.text = ""
+    }
+    
+    
 }

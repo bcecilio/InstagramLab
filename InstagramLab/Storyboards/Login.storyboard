@@ -66,13 +66,23 @@
                                     <action selector="signUpButtonPressed:" destination="eLd-tw-ijb" eventType="touchUpInside" id="aHv-Lc-QwN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-Sw-jA4">
+                                <rect key="frame" x="20" y="401" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="b23-ta-AFQ"/>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="14s-wy-bO9" id="pxL-gN-hOV"/>
+                        <outlet property="errorLabel" destination="tCn-Sw-jA4" id="xA0-ZC-ckz"/>
                         <outlet property="loginButton" destination="gz0-Qo-LFj" id="Wmq-b6-STN"/>
+                        <outlet property="passwordTextField" destination="Kkn-Zd-diG" id="dlU-Bx-BVK"/>
+                        <outlet property="usernameTextField" destination="bef-BB-oI2" id="mIc-xU-5B6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfj-uU-hLb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
