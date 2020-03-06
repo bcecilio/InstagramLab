@@ -12,6 +12,9 @@
 		B71A132824111069008B7646 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A132724111069008B7646 /* MainTabBarController.swift */; };
 		B74B4A522411C04900536002 /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B4A512411C04900536002 /* AuthenticationSession.swift */; };
 		B74B4A562411CD5500536002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74B4A552411CD5500536002 /* GoogleService-Info.plist */; };
+		B77377522412E44700343915 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377512412E44700343915 /* StorageService.swift */; };
+		B77377542412E4A400343915 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377532412E4A400343915 /* DatabaseService.swift */; };
+		B77377562412E4ED00343915 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377552412E4ED00343915 /* Item.swift */; };
 		B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80C2410FACB003069AD /* AppDelegate.swift */; };
 		B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80E2410FACB003069AD /* SceneDelegate.swift */; };
 		B779B8112410FACB003069AD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B8102410FACB003069AD /* FeedViewController.swift */; };
@@ -31,6 +34,9 @@
 		B71A132724111069008B7646 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B74B4A512411C04900536002 /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
 		B74B4A552411CD5500536002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B77377512412E44700343915 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		B77377532412E4A400343915 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		B77377552412E4ED00343915 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B779B8092410FACB003069AD /* InstagramLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B779B80C2410FACB003069AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B779B80E2410FACB003069AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				B74B4A512411C04900536002 /* AuthenticationSession.swift */,
+				B77377512412E44700343915 /* StorageService.swift */,
+				B77377532412E4A400343915 /* DatabaseService.swift */,
 			);
 			path = "Firebase Session";
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 		B779B80B2410FACB003069AD /* InstagramLab */ = {
 			isa = PBXGroup;
 			children = (
+				B77377552412E4ED00343915 /* Item.swift */,
 				B779B82D24110813003069AD /* LottieAnimation */,
 				B779B82A2410FFF5003069AD /* Support Files */,
 				B779B8282410FFCD003069AD /* Controllers */,
@@ -288,11 +297,14 @@
 				B74B4A522411C04900536002 /* AuthenticationSession.swift in Sources */,
 				B779B8232410FF53003069AD /* CreatePostViewController.swift in Sources */,
 				B71A132824111069008B7646 /* MainTabBarController.swift in Sources */,
+				B77377562412E4ED00343915 /* Item.swift in Sources */,
 				B779B8112410FACB003069AD /* FeedViewController.swift in Sources */,
+				B77377522412E44700343915 /* StorageService.swift in Sources */,
 				B71A13262411103C008B7646 /* UIViewControllerNavigation+Extension.swift in Sources */,
 				B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */,
 				B779B8212410FF34003069AD /* ProfileViewController.swift in Sources */,
 				B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */,
+				B77377542412E4A400343915 /* DatabaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
