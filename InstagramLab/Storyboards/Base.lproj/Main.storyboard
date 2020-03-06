@@ -82,7 +82,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wXM-qV-jeb">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wXM-qV-jeb">
                                                 <rect key="frame" x="0.0" y="293" width="414" height="476"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GBe-oO-z19">
@@ -106,12 +106,23 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwI-0N-tew">
                                                 <rect key="frame" x="184" y="189" width="46" height="30"/>
                                                 <state key="normal" title="Edit"/>
+                                                <connections>
+                                                    <action selector="editButtonPressed:" destination="gQ6-wO-lF9" eventType="touchUpInside" id="Vui-dT-heP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MZ-nr-eK2">
+                                                <rect key="frame" x="20" y="255" width="374" height="30"/>
+                                                <state key="normal" title="Update Profile"/>
+                                                <connections>
+                                                    <action selector="updateProfileButtonPressed:" destination="gQ6-wO-lF9" eventType="touchUpInside" id="2nH-jo-jI5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Sy3-y4-12g" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="113" id="0Hm-aK-aVu"/>
                                             <constraint firstAttribute="trailing" secondItem="Sy3-y4-12g" secondAttribute="trailing" constant="112" id="3FC-tP-Yh4"/>
+                                            <constraint firstItem="0MZ-nr-eK2" firstAttribute="top" secondItem="Bhh-vy-dKk" secondAttribute="bottom" constant="7" id="5hU-Q0-yb4"/>
                                             <constraint firstAttribute="trailing" secondItem="MwI-0N-tew" secondAttribute="trailing" constant="184" id="6Rn-w0-Z7X"/>
                                             <constraint firstAttribute="trailing" secondItem="wXM-qV-jeb" secondAttribute="trailing" id="IIm-aN-H6e"/>
                                             <constraint firstItem="Bhh-vy-dKk" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="8" id="QKl-wK-9pr"/>
@@ -120,7 +131,10 @@
                                             <constraint firstItem="wXM-qV-jeb" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" id="fon-rW-p8d"/>
                                             <constraint firstItem="MwI-0N-tew" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="184" id="grg-ak-uBP"/>
                                             <constraint firstAttribute="bottom" secondItem="wXM-qV-jeb" secondAttribute="bottom" id="iQg-7m-omX"/>
+                                            <constraint firstAttribute="trailing" secondItem="0MZ-nr-eK2" secondAttribute="trailing" constant="20" id="owi-kW-vzW"/>
+                                            <constraint firstItem="wXM-qV-jeb" firstAttribute="top" secondItem="0MZ-nr-eK2" secondAttribute="bottom" constant="8" id="qX2-Y3-PUB"/>
                                             <constraint firstAttribute="trailing" secondItem="Bhh-vy-dKk" secondAttribute="trailing" constant="8" id="rOf-Tb-A4r"/>
+                                            <constraint firstItem="0MZ-nr-eK2" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="20" id="ssM-cP-A4V"/>
                                             <constraint firstItem="Sy3-y4-12g" firstAttribute="top" secondItem="r21-cZ-Qmy" secondAttribute="top" constant="8" id="yDD-SP-8bs"/>
                                         </constraints>
                                     </view>
