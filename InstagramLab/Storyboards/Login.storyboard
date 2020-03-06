@@ -64,6 +64,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="eLd-tw-ijb" eventType="touchUpInside" id="aHv-Lc-QwN"/>
+                                    <action selector="toggleLoginToSignUp:" destination="eLd-tw-ijb" eventType="touchUpInside" id="vIg-RE-7aj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-Sw-jA4">

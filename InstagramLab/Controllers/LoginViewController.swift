@@ -47,7 +47,7 @@ class LoginViewController: UIViewController {
                 case .failure(let error):
                     self?.errorLabel.text = "\(error)"
                     self?.errorLabel.textColor = .systemRed
-                case .success(let data):
+                case .success( _):
                     DispatchQueue.main.async {
                         self?.navigateToMainView()
                     }
@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
                         self?.errorLabel.text = "\(error)"
                         self?.errorLabel.textColor = .systemRed
                     }
-                case .success(let newUser):
+                case .success( _):
                     DispatchQueue.main.async {
                         self?.navigateToMainView()
                     }
@@ -78,5 +78,14 @@ class LoginViewController: UIViewController {
         errorLabel.text = ""
     }
     
-    
+    @IBAction func toggleLoginToSignUp(_ sender: UIButton) {
+        
+        accountState = accountState == .existingUser ? .newUser : .existingUser
+        
+        if accountState == .existingUser {
+            self.loginButton.setTitle("Login", for: .normal)
+        } else {
+            self.loginButton.setTitle("Sign Up", for: .normal)
+        }
+    }
 }
