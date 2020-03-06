@@ -6,7 +6,7 @@ target 'InstagramLab' do
   use_frameworks!
   
   # Pods for InstagramLab
-  pod 'Alamofire'
+  pod 'Kingfisher'
   pod 'SnapKit'
   pod 'Firebase/Auth'
   pod 'FirebaseFirestoreSwift'

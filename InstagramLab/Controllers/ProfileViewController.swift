@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
@@ -28,6 +29,13 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    private func updateUI() {
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
         
     }
 }
