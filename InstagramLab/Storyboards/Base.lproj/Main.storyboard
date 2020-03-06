@@ -117,6 +117,13 @@
                                                     <action selector="updateProfileButtonPressed:" destination="gQ6-wO-lF9" eventType="touchUpInside" id="2nH-jo-jI5"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bva-P7-KTD">
+                                                <rect key="frame" x="334" y="0.0" width="60" height="30"/>
+                                                <state key="normal" title="Sign Out"/>
+                                                <connections>
+                                                    <action selector="signOutButtonPressed:" destination="gQ6-wO-lF9" eventType="touchUpInside" id="rd2-Km-GwS"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -125,8 +132,10 @@
                                             <constraint firstItem="0MZ-nr-eK2" firstAttribute="top" secondItem="Bhh-vy-dKk" secondAttribute="bottom" constant="7" id="5hU-Q0-yb4"/>
                                             <constraint firstAttribute="trailing" secondItem="MwI-0N-tew" secondAttribute="trailing" constant="184" id="6Rn-w0-Z7X"/>
                                             <constraint firstAttribute="trailing" secondItem="wXM-qV-jeb" secondAttribute="trailing" id="IIm-aN-H6e"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bva-P7-KTD" secondAttribute="trailing" constant="20" id="NE2-qZ-wJW"/>
                                             <constraint firstItem="Bhh-vy-dKk" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="8" id="QKl-wK-9pr"/>
                                             <constraint firstItem="MwI-0N-tew" firstAttribute="top" secondItem="r21-cZ-Qmy" secondAttribute="top" constant="189" id="a9S-ib-QAf"/>
+                                            <constraint firstItem="Bva-P7-KTD" firstAttribute="top" secondItem="r21-cZ-Qmy" secondAttribute="top" id="cVp-f0-7f4"/>
                                             <constraint firstItem="Bhh-vy-dKk" firstAttribute="top" secondItem="MwI-0N-tew" secondAttribute="bottom" constant="8" id="dOQ-xh-vGJ"/>
                                             <constraint firstItem="wXM-qV-jeb" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" id="fon-rW-p8d"/>
                                             <constraint firstItem="MwI-0N-tew" firstAttribute="leading" secondItem="r21-cZ-Qmy" secondAttribute="leading" constant="184" id="grg-ak-uBP"/>
