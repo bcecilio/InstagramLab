@@ -32,7 +32,10 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        profileImage.layer.cornerRadius = 60
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        updateUI()
     }
     
     private func updateUI() {
@@ -65,7 +68,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func updateProfileButtonPressed(_ sender: UIButton) {
-    guard let displayName = usernameLabel.text, !displayName.isEmpty, let selectedImage = selectedImage else {
+    guard let selectedImage = selectedImage else {
         print("missing fields")
         return
     }
@@ -86,7 +89,6 @@ class ProfileViewController: UIViewController {
         case .success(let url):
             let request = Auth.auth().currentUser?.createProfileChangeRequest()
             request?.photoURL = url
-            request?.displayName = displayName
             request?.commitChanges(completion: { [unowned self] (error) in
                 if let error = error {
                     DispatchQueue.main.async {
@@ -124,5 +126,33 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         
         selectedImage = image
         dismiss(animated: true)
+    }
+}
+
+extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personalCell", for: indexPath)
+        cell.backgroundColor = .orange
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+        let maxSize: CGSize = UIScreen.main.bounds.size
+        let spacingBetweenItems: CGFloat = 11
+        let numberOfItems: CGFloat = 1
+        let totalSpacing: CGFloat = (1.7 * spacingBetweenItems) + (numberOfItems - 1) * numberOfItems
+        let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
+        let itemHeight: CGFloat = maxSize.height * 0.50
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }
