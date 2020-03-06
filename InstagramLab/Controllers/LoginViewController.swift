@@ -21,13 +21,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var questionLabel: UILabel!
     
     private var accountState: AccountState = .existingUser
     private var authSession = AuthenticationSession()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startAnimation()
+//        startAnimation()
     }
     
     private func startAnimation() {
@@ -37,7 +39,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
-        
+        guard let email = usernameTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+            print("missing fields")
+            return
+        }
+        continueLoginFlow(email: email, password: password)
     }
     
     private func continueLoginFlow(email: String, password: String) {
@@ -84,8 +90,12 @@ class LoginViewController: UIViewController {
         
         if accountState == .existingUser {
             self.loginButton.setTitle("Login", for: .normal)
+            self.signupButton.setTitle("Sign Up", for: .normal)
+            self.questionLabel.text = "Don't have an account?"
         } else {
             self.loginButton.setTitle("Sign Up", for: .normal)
+            self.signupButton.setTitle("Login", for: .normal)
+            self.questionLabel.text = "Already have an account?"
         }
     }
 }

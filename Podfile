@@ -13,5 +13,6 @@ target 'InstagramLab' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'lottie-ios'
+  pod 'Firebase/Analytics'
   
 end

@@ -11,6 +11,7 @@
 		B71A13262411103C008B7646 /* UIViewControllerNavigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A13252411103C008B7646 /* UIViewControllerNavigation+Extension.swift */; };
 		B71A132824111069008B7646 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71A132724111069008B7646 /* MainTabBarController.swift */; };
 		B74B4A522411C04900536002 /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B4A512411C04900536002 /* AuthenticationSession.swift */; };
+		B74B4A562411CD5500536002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74B4A552411CD5500536002 /* GoogleService-Info.plist */; };
 		B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80C2410FACB003069AD /* AppDelegate.swift */; };
 		B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80E2410FACB003069AD /* SceneDelegate.swift */; };
 		B779B8112410FACB003069AD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B8102410FACB003069AD /* FeedViewController.swift */; };
@@ -29,6 +30,7 @@
 		B71A13252411103C008B7646 /* UIViewControllerNavigation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewControllerNavigation+Extension.swift"; sourceTree = "<group>"; };
 		B71A132724111069008B7646 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B74B4A512411C04900536002 /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
+		B74B4A552411CD5500536002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B779B8092410FACB003069AD /* InstagramLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B779B80C2410FACB003069AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B779B80E2410FACB003069AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				B779B8292410FFD6003069AD /* Storyboards */,
 				B779B8152410FACC003069AD /* Assets.xcassets */,
 				B779B81A2410FACC003069AD /* Info.plist */,
+				B74B4A552411CD5500536002 /* GoogleService-Info.plist */,
 				B74B4A542411C11400536002 /* Extensions */,
 				B74B4A532411C06300536002 /* Firebase Session */,
 			);
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B779B8272410FFC8003069AD /* Login.storyboard in Resources */,
+				B74B4A562411CD5500536002 /* GoogleService-Info.plist in Resources */,
 				B779B8192410FACC003069AD /* LaunchScreen.storyboard in Resources */,
 				B779B8162410FACC003069AD /* Assets.xcassets in Resources */,
 				B779B82C24110802003069AD /* 16773-fire.json in Resources */,
@@ -440,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brendoncecilio.InstagramLab;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcecilio.InstagramLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brendoncecilio.InstagramLab;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bcecilio.InstagramLab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
