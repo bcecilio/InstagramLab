@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Feed View Controller-->
         <scene sceneID="5xZ-h5-D6G">
             <objects>
                 <viewController storyboardIdentifier="FeedViewController" id="sfO-v8-42I" customClass="FeedViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,13 +46,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Mw-cu-EEe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="UvC-GE-SGc"/>
+                    <tabBarItem key="tabBarItem" title="" image="paperplane" catalog="system" id="UvC-GE-SGc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFb-qF-FIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="-551.11607142857144"/>
         </scene>
-        <!--Item-->
+        <!--Create Post View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="CreatePostViewController" id="BYZ-38-t0r" customClass="CreatePostViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -94,7 +94,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rTK-cI-NEZ"/>
+                    <tabBarItem key="tabBarItem" title="" image="plus.circle" catalog="system" id="rTK-cI-NEZ"/>
                     <connections>
                         <outlet property="captionTextView" destination="n4M-b7-lel" id="3JT-7k-qi7"/>
                         <outlet property="uploadImageView" destination="VCJ-fT-UOM" id="rCK-EF-wl1"/>
@@ -120,7 +120,7 @@
             </objects>
             <point key="canvasLocation" x="3076.811594202899" y="146.65178571428569"/>
         </scene>
-        <!--Item-->
+        <!--Profile View Controller-->
         <scene sceneID="YQu-Wo-HI4">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="gQ6-wO-lF9" customClass="ProfileViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,7 +233,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PtI-Il-CV6"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="cGA-W7-XGS"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="cGA-W7-XGS"/>
                     <connections>
                         <outlet property="collectionView" destination="wXM-qV-jeb" id="Pcb-0b-YwN"/>
                         <outlet property="profileImage" destination="Sy3-y4-12g" id="6hx-hx-12p"/>
@@ -284,7 +284,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.circle" catalog="system" width="64" height="60"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

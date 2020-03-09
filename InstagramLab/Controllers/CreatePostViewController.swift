@@ -27,7 +27,7 @@ class CreatePostViewController: UIViewController {
     }()
     
     private let dbService = DatabaseService()
-    private let postItem: Post
+    private var postItem: Post
     private let storageService = StorageService()
     private var selectedItemImage: UIImage? {
         didSet {
