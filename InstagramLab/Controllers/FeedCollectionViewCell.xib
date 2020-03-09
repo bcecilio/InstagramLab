@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ckd-S6-vRH" customClass="FeedCollectionCell" customModule="InstagramLab" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="424"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Iic-Vh-vbS">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="424"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-01-22 at 4.09.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="klP-fH-Tbx">
+                        <rect key="frame" x="0.0" y="0.0" width="346" height="295"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-ZN-KtN">
+                        <rect key="frame" x="16" y="303" width="314" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="top" secondItem="Iic-Vh-vbS" secondAttribute="top" id="2BP-eK-KJ4"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" id="6EA-Rs-0Yv"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="height" secondItem="Iic-Vh-vbS" secondAttribute="height" multiplier="0.695755" id="6MX-wm-OFZ"/>
+                    <constraint firstAttribute="trailing" secondItem="90e-ZN-KtN" secondAttribute="trailing" constant="16" id="aO6-LX-pn2"/>
+                    <constraint firstItem="90e-ZN-KtN" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" constant="16" id="gia-Ni-5Ec"/>
+                    <constraint firstAttribute="trailing" secondItem="klP-fH-Tbx" secondAttribute="trailing" id="rSi-Kk-oel"/>
+                    <constraint firstItem="90e-ZN-KtN" firstAttribute="top" secondItem="klP-fH-Tbx" secondAttribute="bottom" constant="8" id="yzy-qS-qYk"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="346" height="424"/>
+            <connections>
+                <outlet property="captionLabel" destination="90e-ZN-KtN" id="xXt-XG-yH7"/>
+                <outlet property="imageVIew" destination="klP-fH-Tbx" id="o1m-xb-cls"/>
+                <outlet property="imageView" destination="klP-fH-Tbx" id="yZz-tj-NIv"/>
+            </connections>
+            <point key="canvasLocation" x="34.782608695652179" y="72.991071428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Screen Shot 2020-01-22 at 4.09.37 PM" width="948" height="950"/>
+    </resources>
+</document>

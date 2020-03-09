@@ -15,16 +15,19 @@ class FeedViewController: UIViewController {
     
     private var listener: ListenerRegistration?
     
-//    private var items = [Item]() {
-//        didSet {
-//            DispatchQueue.main.async {
-//                self.collectionView.reloadData()
-//            }
-//        }
-//    }
+    private var items = [Item]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "FeedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "feedCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,7 +39,7 @@ class FeedViewController: UIViewController {
                 }
             } else if let snapshot = snapshot { // this is the data in our firebase database
                 let items = snapshot.documents.map { Item($0.data()) }
-//                self?.items = items
+                self?.items = items
             }
         })
     }
@@ -47,3 +50,34 @@ class FeedViewController: UIViewController {
     }
 }
 
+extension FeedViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as? FeedCollectionCell else {
+            fatalError()
+        }
+        let itemCell = items[indexPath.row]
+        cell.backgroundColor = .orange
+        cell.updateUI(for: itemCell)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            
+        let maxSize: CGSize = UIScreen.main.bounds.size
+        let spacingBetweenItems: CGFloat = 11
+        let numberOfItems: CGFloat = 1
+        let totalSpacing: CGFloat = (1.7 * spacingBetweenItems) + (numberOfItems - 1) * numberOfItems
+        let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
+        let itemHeight: CGFloat = maxSize.height * 0.50
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+}

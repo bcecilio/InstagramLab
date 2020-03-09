@@ -36,16 +36,6 @@ class CreatePostViewController: UIViewController {
             uploadImageView.image = selectedPostImage
         }
     }
-
-    
-//    init?(coder: NSCoder, post: Post) {
-//        self.postItem = post
-//        super.init(coder: coder)
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +78,7 @@ class CreatePostViewController: UIViewController {
         
         let resizeImage = UIImage.resizeImage(originalImage: selectedPostImage!, rect: uploadImageView.bounds)
         
-        dbService.createItem(postName: postCaption, displayName: displayName, post: postItem) { [weak self] (result) in
+        dbService.createItem(postName: postCaption, displayName: displayName) { [weak self] (result) in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -120,7 +110,7 @@ class CreatePostViewController: UIViewController {
             } else {
                 print("everything updated")
                 DispatchQueue.main.async {
-                    self.dismiss(animated: true)
+                    self.showAlert(title: "Success", message: "You just uploaded a pic!")
                 }
             }
         }

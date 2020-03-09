@@ -9,14 +9,14 @@
 import Foundation
 
 struct Item {
-    let postName: String
+    let postCaption: String
     let postId: String
     let imageURL: String
 }
 
 extension Item {
     init(_ dictionary: [String: Any]) {
-        self.postName = dictionary["postName"] as? String ?? "no itemName"
+        self.postCaption = dictionary["postName"] as? String ?? "no itemName"
         self.postId = dictionary["itemId"] as? String ?? "no itemId"
         self.imageURL = dictionary["imageURL"] as? String ?? "no imageURL"
     }
