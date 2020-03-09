@@ -15,13 +15,13 @@ class FeedViewController: UIViewController {
     
     private var listener: ListenerRegistration?
     
-    private var items = [Item]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
+//    private var items = [Item]() {
+//        didSet {
+//            DispatchQueue.main.async {
+//                self.collectionView.reloadData()
+//            }
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class FeedViewController: UIViewController {
                 }
             } else if let snapshot = snapshot { // this is the data in our firebase database
                 let items = snapshot.documents.map { Item($0.data()) }
-                self?.items = items
+//                self?.items = items
             }
         })
     }

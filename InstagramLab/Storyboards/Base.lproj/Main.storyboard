@@ -60,21 +60,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-fT-UOM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-fT-UOM">
                                 <rect key="frame" x="0.0" y="43" width="414" height="338"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-b7-lel">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-b7-lel">
                                 <rect key="frame" x="20" y="389" width="374" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="6qO-Se-3fr"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Bg-OP2">
-                                <rect key="frame" x="20" y="525" width="374" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Bg-OP2">
+                                <rect key="frame" x="20" y="567" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="postButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDJ-aD-TH8"/>
@@ -83,14 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x39-Bg-OP2" secondAttribute="trailing" constant="20" id="0pv-ZJ-385"/>
-                            <constraint firstItem="n4M-b7-lel" firstAttribute="centerX" secondItem="VCJ-fT-UOM" secondAttribute="centerX" id="7vZ-Ix-Eep"/>
-                            <constraint firstItem="n4M-b7-lel" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="389" id="NdM-KD-ETJ"/>
-                            <constraint firstItem="x39-Bg-OP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xp9-NC-Ayg"/>
-                            <constraint firstItem="n4M-b7-lel" firstAttribute="trailing" secondItem="x39-Bg-OP2" secondAttribute="trailing" id="dT4-pV-NfS"/>
-                            <constraint firstItem="x39-Bg-OP2" firstAttribute="top" secondItem="n4M-b7-lel" secondAttribute="bottom" constant="8" id="f6d-ko-nsp"/>
-                            <constraint firstItem="n4M-b7-lel" firstAttribute="top" secondItem="VCJ-fT-UOM" secondAttribute="bottom" constant="8" id="h2S-sg-74k"/>
-                            <constraint firstItem="n4M-b7-lel" firstAttribute="leading" secondItem="x39-Bg-OP2" secondAttribute="leading" id="xJE-F0-QIR"/>
+                            <constraint firstItem="VCJ-fT-UOM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.376116" id="3gE-5R-Akq"/>
+                            <constraint firstItem="VCJ-fT-UOM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="juV-wK-nAD"/>
+                            <constraint firstItem="VCJ-fT-UOM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xVP-M3-nZg"/>
+                            <constraint firstItem="VCJ-fT-UOM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yxL-7C-ury"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -255,9 +250,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Oeg-Vx-bti"/>
-                        <segue destination="sfO-v8-42I" kind="relationship" relationship="viewControllers" id="jwL-Nf-o1O"/>
-                        <segue destination="gQ6-wO-lF9" kind="relationship" relationship="viewControllers" id="a1G-ba-g8V"/>
+                        <segue destination="sfO-v8-42I" kind="relationship" relationship="viewControllers" id="cmE-5H-iyy"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yP1-J8-4gM"/>
+                        <segue destination="gQ6-wO-lF9" kind="relationship" relationship="viewControllers" id="VQf-2j-5gk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crb-ZA-N6r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

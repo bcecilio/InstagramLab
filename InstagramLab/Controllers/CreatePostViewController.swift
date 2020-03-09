@@ -17,6 +17,7 @@ class CreatePostViewController: UIViewController {
     
     private lazy var imagePickerController: UIImagePickerController = {
         let picker = UIImagePickerController()
+        picker.delegate = self
         return picker
     }()
     
@@ -27,22 +28,24 @@ class CreatePostViewController: UIViewController {
     }()
     
     private let dbService = DatabaseService()
-    private var postItem: Post
+    private var postItem: Post!
     private let storageService = StorageService()
-    private var selectedItemImage: UIImage? {
+    
+    private var selectedPostImage: UIImage? {
         didSet {
-            uploadImageView.image = selectedItemImage
+            uploadImageView.image = selectedPostImage
         }
     }
+
     
-    init?(coder: NSCoder, post: Post) {
-        self.postItem = post
-        super.init(coder: coder)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    init?(coder: NSCoder, post: Post) {
+//        self.postItem = post
+//        super.init(coder: coder)
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +76,7 @@ class CreatePostViewController: UIViewController {
     }
     
     @IBAction func postButtonPressed(_ sender: UIButton) {
-        guard let postCaption = captionTextView.text, !postCaption.isEmpty, let postImage = selectedItemImage else {
+        guard let postCaption = captionTextView.text, !postCaption.isEmpty, let postImage = selectedPostImage else {
             showAlert(title: "Missing Fields", message: "All fields are required.")
             return
         }
@@ -83,7 +86,7 @@ class CreatePostViewController: UIViewController {
             return
         }
         
-        let resizeImage = UIImage.resizeImage(originalImage: selectedItemImage!, rect: uploadImageView.bounds)
+        let resizeImage = UIImage.resizeImage(originalImage: selectedPostImage!, rect: uploadImageView.bounds)
         
         dbService.createItem(postName: postCaption, displayName: displayName, post: postItem) { [weak self] (result) in
             switch result {
@@ -114,7 +117,7 @@ class CreatePostViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.showAlert(title: "Error updating Item", message: "\(error.localizedDescription)")
                 }
-            }else {
+            } else {
                 print("everything updated")
                 DispatchQueue.main.async {
                     self.dismiss(animated: true)
@@ -130,6 +133,7 @@ extension CreatePostViewController: UIImagePickerControllerDelegate, UINavigatio
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
             fatalError("could not attain image")
         }
-        selectedItemImage = image
+        selectedPostImage = image
+        dismiss(animated: true)
     }
 }
