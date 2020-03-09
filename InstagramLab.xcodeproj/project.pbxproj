@@ -17,6 +17,7 @@
 		B77377562412E4ED00343915 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377552412E4ED00343915 /* Item.swift */; };
 		B77377582412EB3D00343915 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377572412EB3D00343915 /* UIImage+Extension.swift */; };
 		B773775A2412EB9A00343915 /* UIAlerts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377592412EB9A00343915 /* UIAlerts+Extensions.swift */; };
+		B773775C2412F9E000343915 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B773775B2412F9E000343915 /* Post.swift */; };
 		B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80C2410FACB003069AD /* AppDelegate.swift */; };
 		B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B80E2410FACB003069AD /* SceneDelegate.swift */; };
 		B779B8112410FACB003069AD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B8102410FACB003069AD /* FeedViewController.swift */; };
@@ -41,6 +42,7 @@
 		B77377552412E4ED00343915 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B77377572412EB3D00343915 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		B77377592412EB9A00343915 /* UIAlerts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlerts+Extensions.swift"; sourceTree = "<group>"; };
+		B773775B2412F9E000343915 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B779B8092410FACB003069AD /* InstagramLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B779B80C2410FACB003069AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B779B80E2410FACB003069AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				B77377552412E4ED00343915 /* Item.swift */,
+				B773775B2412F9E000343915 /* Post.swift */,
 				B779B82D24110813003069AD /* LottieAnimation */,
 				B779B82A2410FFF5003069AD /* Support Files */,
 				B779B8282410FFCD003069AD /* Controllers */,
@@ -308,6 +311,7 @@
 				B779B8112410FACB003069AD /* FeedViewController.swift in Sources */,
 				B77377522412E44700343915 /* StorageService.swift in Sources */,
 				B71A13262411103C008B7646 /* UIViewControllerNavigation+Extension.swift in Sources */,
+				B773775C2412F9E000343915 /* Post.swift in Sources */,
 				B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */,
 				B779B8212410FF34003069AD /* ProfileViewController.swift in Sources */,
 				B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */,

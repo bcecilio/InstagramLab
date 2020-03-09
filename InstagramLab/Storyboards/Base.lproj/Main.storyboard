@@ -11,34 +11,98 @@
         <!--Item-->
         <scene sceneID="5xZ-h5-D6G">
             <objects>
-                <viewController id="sfO-v8-42I" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="sfO-v8-42I" customClass="FeedViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Fo-cU-JgS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4ie-f1-KUT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TnX-Mb-DNg">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UMb-Za-Nqm">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="s14-3X-EFg">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4ie-f1-KUT" firstAttribute="top" secondItem="2Mw-cu-EEe" secondAttribute="top" id="4bh-hF-YoC"/>
+                            <constraint firstItem="4ie-f1-KUT" firstAttribute="trailing" secondItem="2Mw-cu-EEe" secondAttribute="trailing" id="Hp2-cE-tnJ"/>
+                            <constraint firstItem="4ie-f1-KUT" firstAttribute="leading" secondItem="2Mw-cu-EEe" secondAttribute="leading" id="HqO-wD-M6X"/>
+                            <constraint firstItem="4ie-f1-KUT" firstAttribute="bottom" secondItem="2Mw-cu-EEe" secondAttribute="bottom" id="jug-pz-7nD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Mw-cu-EEe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="UvC-GE-SGc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFb-qF-FIA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-551"/>
+            <point key="canvasLocation" x="1037.68115942029" y="-551.11607142857144"/>
         </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FeedViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatePostViewController" id="BYZ-38-t0r" customClass="CreatePostViewController" customModule="InstagramLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-fT-UOM">
+                                <rect key="frame" x="0.0" y="43" width="414" height="338"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n4M-b7-lel">
+                                <rect key="frame" x="20" y="389" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6qO-Se-3fr"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Bg-OP2">
+                                <rect key="frame" x="20" y="525" width="374" height="30"/>
+                                <state key="normal" title="Post"/>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDJ-aD-TH8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x39-Bg-OP2" secondAttribute="trailing" constant="20" id="0pv-ZJ-385"/>
+                            <constraint firstItem="n4M-b7-lel" firstAttribute="centerX" secondItem="VCJ-fT-UOM" secondAttribute="centerX" id="7vZ-Ix-Eep"/>
+                            <constraint firstItem="n4M-b7-lel" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="389" id="NdM-KD-ETJ"/>
+                            <constraint firstItem="x39-Bg-OP2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xp9-NC-Ayg"/>
+                            <constraint firstItem="n4M-b7-lel" firstAttribute="trailing" secondItem="x39-Bg-OP2" secondAttribute="trailing" id="dT4-pV-NfS"/>
+                            <constraint firstItem="x39-Bg-OP2" firstAttribute="top" secondItem="n4M-b7-lel" secondAttribute="bottom" constant="8" id="f6d-ko-nsp"/>
+                            <constraint firstItem="n4M-b7-lel" firstAttribute="top" secondItem="VCJ-fT-UOM" secondAttribute="bottom" constant="8" id="h2S-sg-74k"/>
+                            <constraint firstItem="n4M-b7-lel" firstAttribute="leading" secondItem="x39-Bg-OP2" secondAttribute="leading" id="xJE-F0-QIR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="rTK-cI-NEZ"/>
+                    <connections>
+                        <outlet property="captionTextView" destination="n4M-b7-lel" id="3JT-7k-qi7"/>
+                        <outlet property="uploadImageView" destination="VCJ-fT-UOM" id="rCK-EF-wl1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039" y="130"/>
+            <point key="canvasLocation" x="1037.68115942029" y="129.91071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ooc-yN-6IZ">
@@ -221,5 +285,6 @@
     </scenes>
     <resources>
         <image name="person.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

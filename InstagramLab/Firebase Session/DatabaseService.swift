@@ -17,7 +17,7 @@ class DatabaseService {
     // reference to the firebase fire store database
     private let database = Firestore.firestore()
     
-    public func createItem(postName: String, postDate: Double, displayName: String, completion: @escaping (Result<String, Error>) -> ()) {
+    public func createItem(postName: String, displayName: String, post: Post, completion: @escaping (Result<String, Error>) -> ()) {
         
         guard let user = Auth.auth().currentUser else {return}
         
@@ -25,7 +25,7 @@ class DatabaseService {
         let document = database.collection(DatabaseService.postCollection).document()
         
         // create a document un our "items" collection
-        database.collection(DatabaseService.postCollection).document(document.documentID).setData(["postName": postName, "postDate": postDate, "displayName": user.uid]) { (error) in
+        database.collection(DatabaseService.postCollection).document(document.documentID).setData(["postName": postName, "displayName": user.uid]) { (error) in
             
             if let error = error {
                 completion(.failure(error))
