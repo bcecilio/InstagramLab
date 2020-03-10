@@ -17,31 +17,58 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-01-22 at 4.09.37 PM" translatesAutoresizingMaskIntoConstraints="NO" id="klP-fH-Tbx">
-                        <rect key="frame" x="0.0" y="0.0" width="384" height="444"/>
+                        <rect key="frame" x="0.0" y="76" width="384.00000000000023" height="368"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="368" id="t48-WB-jjB"/>
+                        </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90e-ZN-KtN">
                         <rect key="frame" x="16" y="464" width="352" height="20.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVt-6M-Mm9" customClass="DesignableImageView" customModule="InstagramLab" customModuleProvider="target">
+                        <rect key="frame" x="16" y="13" width="55" height="55"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAP-7s-wJu">
+                        <rect key="frame" x="79" y="28.5" width="289" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="289" id="Ph0-gl-dhP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="klP-fH-Tbx" firstAttribute="top" secondItem="Iic-Vh-vbS" secondAttribute="top" id="2BP-eK-KJ4"/>
-                    <constraint firstItem="klP-fH-Tbx" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" id="6EA-Rs-0Yv"/>
-                    <constraint firstItem="klP-fH-Tbx" firstAttribute="height" secondItem="Iic-Vh-vbS" secondAttribute="height" multiplier="0.695755" id="6MX-wm-OFZ"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="top" secondItem="Iic-Vh-vbS" secondAttribute="top" constant="76" id="68W-dE-tUG"/>
+                    <constraint firstItem="YVt-6M-Mm9" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" constant="16" id="7Ba-7A-WK6"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="top" secondItem="YVt-6M-Mm9" secondAttribute="bottom" constant="8" id="Cf8-6a-dAZ"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" id="IXI-yj-4uE"/>
+                    <constraint firstItem="pAP-7s-wJu" firstAttribute="trailing" secondItem="90e-ZN-KtN" secondAttribute="trailing" id="TI8-gr-lTZ"/>
+                    <constraint firstItem="YVt-6M-Mm9" firstAttribute="top" secondItem="Iic-Vh-vbS" secondAttribute="top" constant="13" id="ZE1-Yr-dyt"/>
                     <constraint firstAttribute="trailing" secondItem="90e-ZN-KtN" secondAttribute="trailing" constant="16" id="aO6-LX-pn2"/>
-                    <constraint firstItem="klP-fH-Tbx" firstAttribute="width" secondItem="Iic-Vh-vbS" secondAttribute="width" id="gO9-DW-33H"/>
                     <constraint firstItem="90e-ZN-KtN" firstAttribute="leading" secondItem="Iic-Vh-vbS" secondAttribute="leading" constant="16" id="gia-Ni-5Ec"/>
-                    <constraint firstAttribute="trailing" secondItem="klP-fH-Tbx" secondAttribute="trailing" id="rSi-Kk-oel"/>
-                    <constraint firstItem="90e-ZN-KtN" firstAttribute="top" secondItem="klP-fH-Tbx" secondAttribute="bottom" constant="20" id="yzy-qS-qYk"/>
+                    <constraint firstItem="klP-fH-Tbx" firstAttribute="centerX" secondItem="90e-ZN-KtN" secondAttribute="centerX" id="rzD-WW-8zQ"/>
+                    <constraint firstItem="pAP-7s-wJu" firstAttribute="leading" secondItem="YVt-6M-Mm9" secondAttribute="trailing" constant="8" id="sIV-ce-VW3"/>
+                    <constraint firstItem="90e-ZN-KtN" firstAttribute="top" secondItem="klP-fH-Tbx" secondAttribute="bottom" constant="20" id="vvZ-FL-Jzf"/>
+                    <constraint firstItem="pAP-7s-wJu" firstAttribute="centerY" secondItem="YVt-6M-Mm9" secondAttribute="centerY" id="yBp-n2-FpG"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="384" height="638"/>
             <connections>
                 <outlet property="captionLabel" destination="90e-ZN-KtN" id="xXt-XG-yH7"/>
                 <outlet property="imageView" destination="klP-fH-Tbx" id="yZz-tj-NIv"/>
+                <outlet property="userImageView" destination="YVt-6M-Mm9" id="f5H-KF-q3E"/>
+                <outlet property="usernameLabel" destination="pAP-7s-wJu" id="f2Z-QO-9ae"/>
             </connections>
             <point key="canvasLocation" x="7.2463768115942031" y="174.77678571428569"/>
         </collectionViewCell>

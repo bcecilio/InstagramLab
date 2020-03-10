@@ -40,6 +40,7 @@ class FeedViewController: UIViewController {
             } else if let snapshot = snapshot { // this is the data in our firebase database
                 let items = snapshot.documents.map { Item($0.data()) }
                 self?.items = items
+                dump(items)
             }
         })
     }
@@ -60,7 +61,9 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
             fatalError()
         }
         let itemCell = items[indexPath.row]
-        cell.backgroundColor = .orange
+        cell.layer.borderColor = UIColor.blue.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 60
         cell.updateUI(for: itemCell)
         return cell
     }
@@ -72,7 +75,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let numberOfItems: CGFloat = 1
         let totalSpacing: CGFloat = (1.7 * spacingBetweenItems) + (numberOfItems - 1) * numberOfItems
         let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
-        let itemHeight: CGFloat = maxSize.height * 0.80
+        let itemHeight: CGFloat = maxSize.height * 0.70
         return CGSize(width: itemWidth, height: itemHeight)
     }
     

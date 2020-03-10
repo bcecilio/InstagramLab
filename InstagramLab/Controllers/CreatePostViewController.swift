@@ -102,7 +102,7 @@ class CreatePostViewController: UIViewController {
     }
     
     private func updateImageItemURL(_ url: URL, documentId: String) {
-        Firestore.firestore().collection(DatabaseService.postCollection).document(documentId).updateData(["imageURL": url]) { (error) in
+        Firestore.firestore().collection(DatabaseService.postCollection).document(documentId).updateData(["imageURL": url.absoluteString]) { (error) in
             if let error = error {
                 DispatchQueue.main.async {
                     self.showAlert(title: "Error updating Item", message: "\(error.localizedDescription)")

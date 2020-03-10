@@ -33,6 +33,7 @@
 		B779B8252410FFB3003069AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B779B8242410FFB3003069AD /* LoginViewController.swift */; };
 		B779B8272410FFC8003069AD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B779B8262410FFC8003069AD /* Login.storyboard */; };
 		B779B82C24110802003069AD /* 16773-fire.json in Resources */ = {isa = PBXBuildFile; fileRef = B779B82B24110802003069AD /* 16773-fire.json */; };
+		B799B7692418276900C622D9 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B799B7682418276900C622D9 /* DesignableImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		B779B8242410FFB3003069AD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B779B8262410FFC8003069AD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B779B82B24110802003069AD /* 16773-fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16773-fire.json"; sourceTree = "<group>"; };
+		B799B7682418276900C622D9 /* DesignableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
 		D52AEA84A5749933BE43FFAB /* Pods-InstagramLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramLab.debug.xcconfig"; path = "Target Support Files/Pods-InstagramLab/Pods-InstagramLab.debug.xcconfig"; sourceTree = "<group>"; };
 		E7469F49A75904731612EC66 /* Pods_InstagramLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				B779B8222410FF53003069AD /* CreatePostViewController.swift */,
 				B71C75D22416DD9800533CDA /* FeedCollectionViewCell.xib */,
 				B7674123241736A700FCE21B /* ProfileCollectionViewCell.xib */,
+				B799B7682418276900C622D9 /* DesignableImageView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				B779B8212410FF34003069AD /* ProfileViewController.swift in Sources */,
 				B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */,
 				B773775A2412EB9A00343915 /* UIAlerts+Extensions.swift in Sources */,
+				B799B7692418276900C622D9 /* DesignableImageView.swift in Sources */,
 				B77377542412E4A400343915 /* DatabaseService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
