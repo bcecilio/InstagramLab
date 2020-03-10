@@ -167,7 +167,9 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
             fatalError()
         }
         let itemCell = items[indexPath.row]
-        cell.backgroundColor = .orange
+        cell.layer.borderColor = UIColor.blue.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 60
         cell.updateUI(for: itemCell)
         return cell
     }
