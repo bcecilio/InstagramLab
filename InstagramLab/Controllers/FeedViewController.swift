@@ -63,7 +63,7 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let itemCell = items[indexPath.row]
         cell.layer.borderColor = UIColor.blue.cgColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 60
+        cell.layer.cornerRadius = 30
         cell.updateUI(for: itemCell)
         return cell
     }

@@ -169,7 +169,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
         let itemCell = items[indexPath.row]
         cell.layer.borderColor = UIColor.blue.cgColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 60
+        cell.layer.cornerRadius = 30
         cell.updateUI(for: itemCell)
         return cell
     }
@@ -179,7 +179,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectio
         let maxSize: CGSize = UIScreen.main.bounds.size
         let spacingBetweenItems: CGFloat = 11
         let numberOfItems: CGFloat = 1
-        let totalSpacing: CGFloat = (1.7 * spacingBetweenItems) + (numberOfItems - 1) * numberOfItems
+        let totalSpacing: CGFloat = (1.2 * spacingBetweenItems) + (numberOfItems - 1) * numberOfItems
         let itemWidth: CGFloat = (maxSize.width - totalSpacing) / numberOfItems
         let itemHeight: CGFloat = maxSize.height * 0.50
         return CGSize(width: itemWidth, height: itemHeight)
