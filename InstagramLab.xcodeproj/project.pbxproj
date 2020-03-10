@@ -14,6 +14,8 @@
 		B71C75D92416E40F00533CDA /* FeedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71C75D82416E40F00533CDA /* FeedCollectionCell.swift */; };
 		B74B4A522411C04900536002 /* AuthenticationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B4A512411C04900536002 /* AuthenticationSession.swift */; };
 		B74B4A562411CD5500536002 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74B4A552411CD5500536002 /* GoogleService-Info.plist */; };
+		B7674124241736A700FCE21B /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7674123241736A700FCE21B /* ProfileCollectionViewCell.xib */; };
+		B76741262417378F00FCE21B /* ProfileCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76741252417378F00FCE21B /* ProfileCollectionCell.swift */; };
 		B77377522412E44700343915 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377512412E44700343915 /* StorageService.swift */; };
 		B77377542412E4A400343915 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377532412E4A400343915 /* DatabaseService.swift */; };
 		B77377562412E4ED00343915 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77377552412E4ED00343915 /* Item.swift */; };
@@ -41,6 +43,8 @@
 		B71C75D82416E40F00533CDA /* FeedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionCell.swift; sourceTree = "<group>"; };
 		B74B4A512411C04900536002 /* AuthenticationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSession.swift; sourceTree = "<group>"; };
 		B74B4A552411CD5500536002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7674123241736A700FCE21B /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		B76741252417378F00FCE21B /* ProfileCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionCell.swift; sourceTree = "<group>"; };
 		B77377512412E44700343915 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		B77377532412E4A400343915 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		B77377552412E4ED00343915 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -157,8 +161,10 @@
 				B779B8102410FACB003069AD /* FeedViewController.swift */,
 				B779B8202410FF34003069AD /* ProfileViewController.swift */,
 				B71C75D82416E40F00533CDA /* FeedCollectionCell.swift */,
+				B76741252417378F00FCE21B /* ProfileCollectionCell.swift */,
 				B779B8222410FF53003069AD /* CreatePostViewController.swift */,
 				B71C75D22416DD9800533CDA /* FeedCollectionViewCell.xib */,
+				B7674123241736A700FCE21B /* ProfileCollectionViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				B779B8162410FACC003069AD /* Assets.xcassets in Resources */,
 				B71C75D32416DD9800533CDA /* FeedCollectionViewCell.xib in Resources */,
 				B779B82C24110802003069AD /* 16773-fire.json in Resources */,
+				B7674124241736A700FCE21B /* ProfileCollectionViewCell.xib in Resources */,
 				B779B8142410FACB003069AD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +328,7 @@
 				B71A13262411103C008B7646 /* UIViewControllerNavigation+Extension.swift in Sources */,
 				B773775C2412F9E000343915 /* Post.swift in Sources */,
 				B779B80D2410FACB003069AD /* AppDelegate.swift in Sources */,
+				B76741262417378F00FCE21B /* ProfileCollectionCell.swift in Sources */,
 				B779B8212410FF34003069AD /* ProfileViewController.swift in Sources */,
 				B779B80F2410FACB003069AD /* SceneDelegate.swift in Sources */,
 				B773775A2412EB9A00343915 /* UIAlerts+Extensions.swift in Sources */,

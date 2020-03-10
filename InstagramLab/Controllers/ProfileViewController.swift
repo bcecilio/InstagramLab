@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 import Kingfisher
 
 class ProfileViewController: UIViewController {
@@ -28,15 +29,42 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    private var items = [Item]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    private var listener: ListenerRegistration?
     private let storageService = StorageService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = 60
+        profileImage.layer.cornerRadius = 90
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
         updateUI()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(true)
+            listener = Firestore.firestore().collection(DatabaseService.postCollection).addSnapshotListener({ [weak self] (snapshot, error) in
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self?.showAlert(title: "Try again later", message: "firestore error: \(error)")
+                    }
+                } else if let snapshot = snapshot { // this is the data in our firebase database
+                    let items = snapshot.documents.map { Item($0.data()) }
+                    self?.items = items
+                }
+            })
+        }
+        
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(true)
+            listener?.remove()
+        }
     
     private func updateUI() {
         guard let user = Auth.auth().currentUser else {
@@ -131,12 +159,16 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "personalCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as? ProfileCollectionCell else {
+            fatalError()
+        }
+        let itemCell = items[indexPath.row]
         cell.backgroundColor = .orange
+        cell.updateUI(for: itemCell)
         return cell
     }
     
