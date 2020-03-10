@@ -25,6 +25,8 @@ class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemYellow
+        collectionView.backgroundColor = .systemYellow
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "FeedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "feedCell")
