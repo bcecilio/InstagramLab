@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Lottie
 
 enum AccountState {
     case existingUser
@@ -16,7 +15,7 @@ enum AccountState {
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet private var animationView: Lottie.AnimationView!
+//    @IBOutlet private var animationView: Lottie.AnimationView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -32,11 +31,11 @@ class LoginViewController: UIViewController {
 //        startAnimation()
     }
     
-    private func startAnimation() {
-        animationView.animation = Animation.named("16773-fire", subdirectory: nil)
-        animationView.loopMode = .loop
-        animationView.play()
-    }
+//    private func startAnimation() {
+//        animationView.animation = Animation.named("16773-fire", subdirectory: nil)
+//        animationView.loopMode = .loop
+//        animationView.play()
+//    }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         guard let email = usernameTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {

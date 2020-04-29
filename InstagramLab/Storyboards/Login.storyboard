@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,10 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14s-wy-bO9" customClass="LottieAnimationView">
-                                <rect key="frame" x="96" y="146" width="223" height="211"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bef-BB-oI2">
                                 <rect key="frame" x="96" y="482" width="223" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,23 +68,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="tCn-Sw-jA4" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="20" id="0Gg-VX-b2B"/>
-                            <constraint firstItem="14s-wy-bO9" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="96" id="3uC-6N-nBX"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="bottom" secondItem="h3R-9H-cRt" secondAttribute="bottom" constant="107" id="4zy-rk-4Pn"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="9K9-7h-vLF" secondAttribute="trailing" constant="95" id="8oI-O9-5F4"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="gz0-Qo-LFj" secondAttribute="trailing" constant="20" id="BsK-RT-29M"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="gz0-Qo-LFj" secondAttribute="trailing" constant="20" id="G8J-fE-8xc"/>
                             <constraint firstItem="gz0-Qo-LFj" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="20" id="Gfl-rK-WPm"/>
-                            <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="14s-wy-bO9" secondAttribute="trailing" constant="95" id="HJa-Ry-ah6"/>
                             <constraint firstItem="Kkn-Zd-diG" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="96" id="JrN-dR-H9j"/>
                             <constraint firstItem="gz0-Qo-LFj" firstAttribute="top" secondItem="Kkn-Zd-diG" secondAttribute="bottom" constant="8" id="LGX-w0-lYZ"/>
                             <constraint firstItem="MGx-Eg-9FO" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="105" id="LXx-iz-Att"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="MGx-Eg-9FO" secondAttribute="trailing" constant="104" id="ML4-B4-sni"/>
                             <constraint firstItem="h3R-9H-cRt" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="20" id="NgC-ob-2p2"/>
                             <constraint firstItem="N42-nN-Rmq" firstAttribute="top" secondItem="bef-BB-oI2" secondAttribute="bottom" constant="37" id="QUS-Po-32a"/>
-                            <constraint firstItem="14s-wy-bO9" firstAttribute="top" secondItem="b23-ta-AFQ" secondAttribute="top" constant="102" id="R0I-PR-8BU"/>
                             <constraint firstItem="9K9-7h-vLF" firstAttribute="top" secondItem="tCn-Sw-jA4" secondAttribute="bottom" constant="30" id="Xp1-ZY-LZc"/>
                             <constraint firstItem="b23-ta-AFQ" firstAttribute="trailing" secondItem="h3R-9H-cRt" secondAttribute="trailing" constant="20" id="a5y-GZ-l8I"/>
-                            <constraint firstItem="tCn-Sw-jA4" firstAttribute="top" secondItem="14s-wy-bO9" secondAttribute="bottom" constant="45" id="atF-AG-ohR"/>
                             <constraint firstItem="gz0-Qo-LFj" firstAttribute="top" secondItem="Kkn-Zd-diG" secondAttribute="bottom" constant="8" id="bor-Ga-Fhc"/>
                             <constraint firstItem="bef-BB-oI2" firstAttribute="top" secondItem="9K9-7h-vLF" secondAttribute="bottom" constant="8" id="euk-UN-OkX"/>
                             <constraint firstItem="N42-nN-Rmq" firstAttribute="leading" secondItem="b23-ta-AFQ" secondAttribute="leading" constant="96" id="fl7-OG-cPU"/>
@@ -106,7 +98,6 @@
                         <viewLayoutGuide key="safeArea" id="b23-ta-AFQ"/>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="14s-wy-bO9" id="pxL-gN-hOV"/>
                         <outlet property="errorLabel" destination="tCn-Sw-jA4" id="xA0-ZC-ckz"/>
                         <outlet property="loginButton" destination="gz0-Qo-LFj" id="Wmq-b6-STN"/>
                         <outlet property="passwordTextField" destination="Kkn-Zd-diG" id="dlU-Bx-BVK"/>

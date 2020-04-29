@@ -66,19 +66,19 @@ class CreatePostViewController: UIViewController {
     }
     
     @IBAction func postButtonPressed(_ sender: UIButton) {
-        guard let postCaption = captionTextView.text, !postCaption.isEmpty, let postImage = selectedPostImage else {
+        guard let postCaption = captionTextView.text, !postCaption.isEmpty, let _ = selectedPostImage else {
             showAlert(title: "Missing Fields", message: "All fields are required.")
             return
         }
         
-        guard let displayName = Auth.auth().currentUser?.displayName else {
-            showAlert(title: "Incomplete Profile", message: "Please create a username in your profile settings.")
-            return
-        }
+//        guard let displayName = Auth.auth().currentUser?.displayName else {
+//            showAlert(title: "Incomplete Profile", message: "Please create a username in your profile settings.")
+//            return
+//        }
         
         let resizeImage = UIImage.resizeImage(originalImage: selectedPostImage!, rect: uploadImageView.bounds)
         
-        dbService.createItem(postName: postCaption, displayName: displayName) { [weak self] (result) in
+        dbService.createItem(postName: postCaption) { [weak self] (result) in
             switch result {
             case .failure(let error):
                 DispatchQueue.main.async {
@@ -86,6 +86,8 @@ class CreatePostViewController: UIViewController {
                 }
             case .success(let documentId):
                 self?.uploadPhoto(image: resizeImage, documentId: documentId)
+                self?.captionTextView.text = nil
+                self?.uploadImageView.image = UIImage(systemName: "square.and.arrow.up")
             }
         }
     }

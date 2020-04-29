@@ -17,7 +17,7 @@ class DatabaseService {
     // reference to the firebase fire store database
     private let database = Firestore.firestore()
     
-    public func createItem(postName: String, displayName: String, completion: @escaping (Result<String, Error>) -> ()) {
+    public func createItem(postName: String, completion: @escaping (Result<String, Error>) -> ()) {
         
         guard let user = Auth.auth().currentUser else {return}
         

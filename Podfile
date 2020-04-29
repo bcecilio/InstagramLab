@@ -6,13 +6,12 @@ target 'InstagramLab' do
   use_frameworks!
   
   # Pods for InstagramLab
-  pod 'Kingfisher'
   pod 'SnapKit'
   pod 'Firebase/Auth'
   pod 'FirebaseFirestoreSwift'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
-  pod 'lottie-ios'
   pod 'Firebase/Analytics'
+  pod 'Kingfisher'
   
 end
