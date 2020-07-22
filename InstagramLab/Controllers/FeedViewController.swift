@@ -80,9 +80,4 @@ extension FeedViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
         let itemHeight: CGFloat = maxSize.height * 0.70
         return CGSize(width: itemWidth, height: itemHeight)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-//    }
 }

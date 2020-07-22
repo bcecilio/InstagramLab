@@ -71,11 +71,6 @@ class CreatePostViewController: UIViewController {
             return
         }
         
-//        guard let displayName = Auth.auth().currentUser?.displayName else {
-//            showAlert(title: "Incomplete Profile", message: "Please create a username in your profile settings.")
-//            return
-//        }
-        
         let resizeImage = UIImage.resizeImage(originalImage: selectedPostImage!, rect: uploadImageView.bounds)
         
         dbService.createItem(postName: postCaption) { [weak self] (result) in

@@ -12,8 +12,6 @@ import FirebaseAuth
 
 class ProfileCollectionCell: UICollectionViewCell {
     
-//    @IBOutlet weak var userImageView: UIImageView!
-//    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     
