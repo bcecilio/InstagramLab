@@ -28,14 +28,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        startAnimation()
     }
-    
-//    private func startAnimation() {
-//        animationView.animation = Animation.named("16773-fire", subdirectory: nil)
-//        animationView.loopMode = .loop
-//        animationView.play()
-//    }
     
     @IBAction func signUpButtonPressed(_ sender: UIButton) {
         guard let email = usernameTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {

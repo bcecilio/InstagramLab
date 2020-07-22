@@ -18,7 +18,7 @@ class ProfileCollectionCell: UICollectionViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     
     public func updateUI(for item: Item) {
-        imageView.kf.setImage(with: URL(fileURLWithPath: item.imageURL))
+        imageView.kf.setImage(with: URL(string: item.imageURL))
         captionLabel.text = item.postCaption
     }
 }
