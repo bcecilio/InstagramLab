@@ -40,7 +40,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileImage.layer.cornerRadius = 90
+        profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "ProfileCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "profileCell")
